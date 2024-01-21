@@ -5,7 +5,7 @@
     # Activar rewrite
     RewriteEngine on
 
-    ErrorDocument 404 http://Examen_MiguelHurtado/error/
+    ErrorDocument 404 http://Examen_MiguelHurtado/TiendaPHP/error/
 
     RewriteCond %{SCRIPT_FILENAME} !-d
     RewriteCond %{SCRIPT_FILENAME} !-f

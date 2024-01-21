@@ -21,7 +21,7 @@ class Router {
         $method = $_SERVER['REQUEST_METHOD'];
         //print_r($_SERVER);die($method);
 
-        $action = preg_replace('/Tienda_MiguelHurtado/','',$_SERVER['REQUEST_URI']);
+        $action = preg_replace('#/Tienda_MiguelHurtado/TiendaPHP/#','',$_SERVER['REQUEST_URI']);
 
         //$_SERVER['REQUEST_URI'] almacena la cadena de texto que hay después del nombre del host en la URL
         $action = trim($action, '/');
@@ -42,7 +42,7 @@ class Router {
             echo call_user_func($callback,$param);
         }else{
             
-            header("Location:/Tienda_MiguelHurtado/error");
+            header("Location:/Tienda_MiguelHurtado/TiendaPHP/error");
         }
     }
 }
